@@ -1,4 +1,7 @@
-## Features
+I made my own version, with Blackjack and hookers
+*(ChatGPT helped me)*
+
+# Features
 
 - **GUI:** Powered by PyQt5.
 - **Drag & Drop:** Import settings or select folders by dragging them directly into the application window.
@@ -6,9 +9,7 @@
 - **Custom Path:** Choose a specific destination path for backup files.
 - **Backup Progress:** View the progress of the backup process via a progress bar.
 
----
-
-## Installation
+# Installation
 ```bash
 # 1. Clone the repo
 git clone https://github.com/SunsetSamu/Backdays.git
@@ -20,9 +21,8 @@ pip install -r requirements.txt
 # 1. Start the application
 python main_v6_latest.py
 ```
----
 
-## Usage
+# Usage
 
 **Select folders to backup:**
 - **Drag and drop** folders directly into the application window, or
@@ -39,35 +39,31 @@ python main_v6_latest.py
 - **Import settings:** Drag and drop a JSON file with saved settings, or use the **"Import Settings"** button to select a file from the dialog.
 - **Export settings:** Use the **"Export Settings"** button to save the current settings to a JSON file.
 
----
-
-## Requirements
+# Requirements
 
 - Python 3.x
 - PyQt5
 
----
+# Changelog
 
-## Changelog
-
-### V6_latest
+## V6_latest
 
 1. Translated comments and GUI to english.
 
 ---
 
-### V6:
-#### Practical Changelog
+## V6:
+### Practical Changelog
 
-1. **Import and Export Settings:** Buttons have been added to import and export settings in JSON format. This allows users to save and load their selected folder and custom path settings.
+1. **Import and Export Settings:** Buttons have been added to import and export backup setups in JSON format.
 
-2. **Drag and Drop Import Support:** You can now import settings by dragging and dropping JSON files into the application window. This makes it easier to load settings without having to use the import buttons.
+2. **Drag and Drop Import Support:** You can now import settings by dragging and dropping JSON files into the application window.
 
 3. **Custom Path Verification and Creation:** When importing settings, if the custom path does not exist, it is automatically created. Additionally, the existence of the custom path is validated to ensure that it can be used.
 
 4. **Custom Path Label Update:** The label for the custom path selection button now displays the name of the selected folder instead of the full path.
 
-#### Technical Changelog
+### Technical Changelog
 
 1. **Import and Export Settings:**
 - Added two buttons to import (`import_btn`, lines 22-24) and export (`export_btn`, lines 26-28) settings, each connected to their respective methods (`import_settings` and `export_settings`).
@@ -89,16 +85,16 @@ python main_v6_latest.py
 
 ---
 
-### V5: 
-#### Practical Changelog
+## V5: 
+### Practical Changelog
 
-1. **Drag and Drop Support:** Added functionality to drag and drop folders directly into the application window. This makes it easier to add folders for backup without having to navigate through selection dialogs.
+1. **Drag and Drop Support:** Added functionality to drag and drop folders directly into the application window.
 
 2. **Custom Backup Path:** Users can now choose a custom path to save backups. This option is controlled by a checkbox and a button to select the destination path.
 
-3. **Progress Indicator:** A progress bar has been added to show the progress of the backup creation process. This provides visual feedback on the progress of the backup.
+3. **Progress Indicator:** A progress bar has been added to show the progress of the backup creation process.
 
-#### Technical Changelog
+### Technical Changelog
 
 1. **Drag and Drop Functionality:**
 - Enabled support for dragging and dropping folders into the application window with `setAcceptDrops(True)` (line 16).
@@ -118,8 +114,8 @@ python main_v6_latest.py
 
 ---
 
-### V4:
-#### Practical Changelog
+## V4:
+### Practical Changelog
 
 1. **Multiple Folder Support:** The application now allows selecting and managing multiple folders for backup. Users can select multiple folders and each will be included in the backup process.
 
@@ -127,7 +123,7 @@ python main_v6_latest.py
 
 3. **Improved User Interface:** Improvements have been made to the interface to dynamically display selected folders and allow management of these folders via checkboxes.
 
-#### Technical Changelog
+### Technical Changelog
 
 1. **Multiple Folder Support:**
 - Folder selection handling has been modified to allow multiple selections, by storing the folders in `self.selected_folders` (line 34).
@@ -151,16 +147,16 @@ python main_v6_latest.py
 
 ---
 
-### V3:
-#### Practical Changelog
+## V3:
+### Practical Changelog
 
-1. **Graphical User Interface (GUI):** A graphical interface based on PyQt5 was added, allowing users to select a folder and create backups more intuitively.
+1. **Graphical User Interface (GUI):** A graphical interface based on PyQt5 was added, with buttons and labels.
 
-2. **Folder Selection:** The user can now select the specific folder to be backed up, offering greater flexibility and control over the backup process.
+2. **Folder Selection:** The user can now select the specific folder to be backed up.
 
-3. **Extended File Exclusion:** In addition to ZIP files and the script, temporary editing files (`.1~`, `.2~`, `.3~`) are excluded, improving backup accuracy.
+3. **Extended File Exclusion:** In addition to ZIP files and the script, temporary editing files (`.1~`, `.2~`, `.3~`) are excluded.
 
-#### Technical Changelog
+### Technical Changelog
 
 1. **Added PyQt5 for GUI:**
 - Imported `QApplication`, `QMainWindow`, `QFileDialog`, `QPushButton`, `QLabel`, `QVBoxLayout`, and `QWidget` from PyQt5 to create a graphical interface (line 4).
@@ -179,14 +175,14 @@ python main_v6_latest.py
 
 ---
 
-### V2:
-#### Practical Changelog
+## V2:
+### Practical Changelog
 
-1. **Better file exclusion:** The script now excludes both the script file and any ZIP file containing "backup" in its name, improving efficiency and avoiding redundancies.
+1. **Better file exclusion:** The script now excludes both the script file and any ZIP file containing "backup" in its name.
   
-2. **Unique ZIP file name:** The generated ZIP file now includes a unique timestamp (date and time) in its name, preventing overwrites and making it easier to identify backups.
+2. **Unique ZIP file name:** The generated ZIP file now includes a unique timestamp (date and time) in its name.
 
-#### Technical Changelog
+### Technical Changelog
 
 1. **Excluding ZIP files with "backup" in the name:**
 - On line 13, added `not ("backup" in file.lower() and file.endswith('.zip'))` condition to exclude ZIP files that contain "backup" in their name and that might have been generated in previous runs.
