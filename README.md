@@ -1,3 +1,13 @@
+## Features
+
+- **GUI:** Powered by PyQt5.
+- **Drag & Drop:** Import settings or select folders by dragging them directly into the application window.
+- **Persistent settings:** Save and load backup settings with JSON files.
+- **Custom Path:** Choose a specific destination path for backup files.
+- **Backup Progress:** View the progress of the backup process via a progress bar.
+
+---
+
 ## Installation
 ```bash
 # 1. Clone the repo
@@ -28,16 +38,6 @@ python main_v6_latest.py
 **Import or export settings:**
 - **Import settings:** Drag and drop a JSON file with saved settings, or use the **"Import Settings"** button to select a file from the dialog.
 - **Export settings:** Use the **"Export Settings"** button to save the current settings to a JSON file.
-
----
-
-## Features
-
-- **GUI:** Powered by PyQt5.
-- **Drag & Drop:** Import settings or select folders by dragging them directly into the application window.
-- **Persistent settings:** Save and load backup settings with JSON files.
-- **Custom Path:** Choose a specific destination path for backup files.
-- **Backup Progress:** View the progress of the backup process via a progress bar.
 
 ---
 
