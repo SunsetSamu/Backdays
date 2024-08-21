@@ -33,7 +33,7 @@ python main_v6_latest.py
 - Click the **"Select Path"** button and choose the folder where you want to save the backup files.
 
 **Create the backup:**
-- Click **"Create Backup"** to start the process of creating the ZIP file with the contents of the selected folders.
+- Click **"Create Backup"** to start the process of creating the ZIP file/s with the contents of the selected folder/s.
 
 **Import or export settings:**
 - **Import settings:** Drag and drop a JSON file with saved settings, or use the **"Import Settings"** button to select a file from the dialog.
